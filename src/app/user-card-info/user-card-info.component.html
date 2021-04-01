@@ -1,0 +1,38 @@
+<h1>Info Users</h1>
+
+<div>
+    <div>
+        <img src="{{user.picture.large}}" alt="">
+    </div>
+    
+    <p [title]="user.gender">
+        {{user.gender}}  
+    </p>
+    <p [title]="user.name.title" [title]="user.name.last" [title]="user.name.first">  
+        {{user.name.title}} {{user.name.first}} {{user.name.last}}
+    </p>
+    <p [title]="user.email">
+        {{user.email}}
+    </p>
+    <p [title]="user.location.street.number" [title]="user.location.street.name">
+        {{user.location.street.number}} {{user.location.street.name}}
+    </p>
+    <p [title]="user.location.city" [title]="user.location.state" [title]="user.location.country" [title]="user.location.postcode">
+        Ville : {{user.location.city}} <br> Etat : {{user.location.state}} <br> Pays : {{user.location.country}} <br> Code Postal : {{user.location.postcode}}
+    </p>
+    <p [title]="user.location.timezone.description" [title]="user.location.state" [title]="user.location.country">
+        Fuseau Horaire : {{user.location.timezone.offset}} <br> Fuseau Horaire Localisation: {{user.location.timezone.description}}
+        </p>
+        <p [title]="user.login.username" >
+            Username : {{user.login.username}}
+        </p>
+        <p [title]="user.dob.age" >
+        Age : {{user.dob.age}} ans
+    </p>
+    <p [title]="user.phone" [title]="user.cell">
+        Portable : {{user.phone}}
+    </p>
+  
+</div>
+
+

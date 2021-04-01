@@ -1,0 +1,26 @@
+<h1>Users List</h1>
+
+<div *ngFor="let user of users" [routerLink]="['/card', user.login.uuid]" (click)="onInfo()" >
+    <div>
+        <img src="{{user.picture.medium}}" alt="">
+    </div>
+   
+    <p [title]="user.name.title" [title]="user.name.last" [title]="user.name.first">  
+        {{user.name.title}} {{user.name.first}} {{user.name.last}}
+    </p>
+
+    <p [title]="user.email">
+        {{user.email}}
+    </p>
+   
+   
+    <div [title]="user.dob.age" *ngIf="user.dob.age <= 40">
+        <img src="../../assets/Icon_User/rookie.svg" alt="">
+    </div>
+    <div [title]="user.dob.age" *ngIf="user.dob.age > 40 && user.dob.age <= 60">
+        <img src="../../assets/Icon_User/advance.svg" alt="">
+    </div>
+    <div [title]="user.dob.age" *ngIf="user.dob.age > 60">
+        <img src="../../assets/Icon_User/expert.svg" alt="">
+    </div>
+</div>

@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+}
+ div {
+    width: 40%;
+    margin: 0 auto;
+    background: #dedede;
+    border-radius: 8px;
+   
+    img {
+        border-radius: 50%;
+        width: 200px;
+        margin: 10px auto;
+    }
+
+    p {
+        padding-bottom: 10px;
+        text-align: center;
+        border-bottom: 2px dashed palevioletred;
+    }
+
+}
